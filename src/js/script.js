@@ -1,12 +1,17 @@
 
 document.addEventListener("DOMContentLoaded", () =>{
     const toggleThemeButton = document.getElementById("toggleTheme");
-    // const themeIcon = document.querySelector()
+    const themeIcon = document.querySelector(".fa-sun");
 
     function setTheme(isDark) {
-        console.log(`${isDark} tes`);
+        if (isDark) {
+            themeIcon.classList.remove("fa-sun");
+            themeIcon.classList.add("fa-moon");
+        } else {
+            themeIcon.classList.remove("fa-moon");
+            themeIcon.classList.add("fa-sun");
+        }
     }
-
     toggleThemeButton.addEventListener("click", ()=>{
         const isDark = document.body.classList.toggle("dark-theme");
         localStorage.setItem("isDark", isDark);
