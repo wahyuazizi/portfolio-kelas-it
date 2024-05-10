@@ -1,0 +1,270 @@
+:root{
+    /* light theme */
+    --color-primary: #EEEEEE;
+    --color-secondary: #222831;
+    --color-accent: #00ADB5;
+    --color-accent-2: #393E46;
+    --color-other: #fff;
+
+    /* dark */
+    /* light theme */
+    --dark-color-primary: #222831;
+    --dark-color-secondary: #EEEEEE;
+    --dark-color-accent: #00ADB5;
+    --dark-color-accent-2: #3f8386;
+    --dark-color-other: #393E46;
+}
+
+.dark-theme{
+    /* light theme */
+    --color-primary: var(--dark-color-primary);
+    --color-secondary: var(--dark-color-secondary);
+    --color-accent: var(--dark-color-accent);
+    --color-accent-2: var(--dark-color-accent-2);
+    --color-other: var(--dark-color-other);
+}
+
+
+html {
+    box-sizing: border-box;
+    /* font-size: 62.5%; */
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Archivo', sans-serif;
+    color:var(--color-secondary);
+    line-height: 1.5;
+    font-size: 1rem;
+    padding:0;
+    margin: 0;
+    background-color: var(--color-primary);
+}
+a{
+    text-decoration: none;
+}
+
+/* Style Hero */
+
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+    /* Style Navbar */
+
+.navbar{
+    display: flex;
+    padding: 1rem 4rem;
+    justify-content: space-between;
+}
+.navbar ul{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar ul li a{
+    color: var(--color-secondary);
+    font-weight: 700;
+}
+
+.logo{
+    height: 35px;
+}
+
+    /* Akhir Style Navbar */
+
+    /* Style isi Hero Section */
+.hero-section{
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    padding: 0 8rem;
+}
+
+.intro-hero-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.intro-hero-section ul{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin-left: 1.25rem;
+}
+
+.intro-hero-section ul li{
+    position: relative;
+}
+.intro-hero-section ul li::before{
+    content: "\2022"; /* Karakter bullet (Unicode untuk bullet) */
+    color: var(--color-accent);
+    font-size: 3rem; /* Ukuran bullet */
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.intro-hero-section h1{
+    font-size: 3rem;
+}
+
+.profil{
+    height: 350px;
+    border-radius: 100%;
+}
+    /* Akhir style isi section */
+
+    /* bottom hero section */
+
+.bottom-hero{
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+.tech-lists{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+    /* akhir bottom hero section */
+
+/* Akhie Style Hero */
+
+/* Section2 */
+
+.container2{
+    justify-content: center;
+    /* align-items: center; */
+    gap: 4rem;
+    padding: 4rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 3rem;
+    /* padding: 0 4rem; */
+  }
+
+.item-grid{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    background-color: var(--color-other);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.title-section{
+    text-align: center;
+}
+
+.btn-service{
+    align-self: center;
+}
+
+
+/* Akhir Section2 */
+
+/* Section3 */
+
+.container3{
+    height: auto;
+    gap: 4rem;
+    padding: 4rem;
+}
+
+.item-grid-porto{
+    align-items: start;
+    flex-direction: column;
+    gap: 3rem;
+    border-style: solid;
+    border-color: var(--color-secondary);
+}
+
+/* Akhir section3 */
+
+/* Footer */
+
+.container-footer{
+    height: auto;
+    align-items: center;
+}
+
+.content-footer{
+    display: flex;
+    padding: 3rem 4rem;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--color-accent-2);
+    color: var(--color-primary);
+    gap: 4rem;
+    align-items: center;
+}
+
+.grid-footer{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+}
+
+.item-grid-footer{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.logo-footer{
+    height: 120px;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--color-accent-2);
+    color: var(--color-primary);
+    padding: 1rem;
+    align-items: center;
+}
+
+footer a{
+    color: var(--color-primary);
+}
+
+/* Akhir Footer */
+
+/* BUTTON & iCON*/
+
+button{
+    border: none;
+    border-radius: 1rem;
+    color: var(--color-primary);
+    padding: .725rem 1rem;
+    background-color: var(--color-accent);
+    cursor: pointer;
+}
+
+#toggleTheme{
+    cursor: pointer;
+}
+
+i{
+    font-size: 2rem;
+}
+
+/* Akhir BUTTON */
